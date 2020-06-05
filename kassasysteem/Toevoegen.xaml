@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="kassasysteem.Toevoegen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:kassasysteem"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Width="196" Height="312">
+    <Grid x:Name="Gridtoevoegen" Background="#FF7043FF" Width="196" Height="312">
+        <TextBox x:Name="txtPnaam" HorizontalAlignment="Center" Height="23" Width="170" Margin="0,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />
+        <TextBox x:Name="txtPrijs" HorizontalAlignment="Center" Height="23" Width="170" Margin="0,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" />
+
+        <Button x:Name="Update" Content="Update" HorizontalAlignment="Center" Margin="27,0,32,101" VerticalAlignment="Bottom" Width="137" Height="23" Click="btnUpdate_Click" Background="#FF0FE430"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,45,0,0" TextWrapping="Wrap" Text="Product Naam" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,95,0,0" TextWrapping="Wrap" Text="Prijs" VerticalAlignment="Top"/>
+    </Grid>
+</UserControl>

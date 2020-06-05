@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="kassasysteem.ProductControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:kassasysteem"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Width="683" Height="420">
+    <Grid Width="683" Height="420" Background="#FF23FF84">
+        <DataGrid x:Name="DGProduct" HorizontalAlignment="Left" Height="312" Width="240" Margin="443,0,0,0" VerticalAlignment="Top" AutoGenerateColumns="False" CanUserAddRows="False" Background="#FF084217" MouseDoubleClick="DGProduct_MouseDoubleClick">
+            <DataGrid.Columns>
+
+                <DataGridTemplateColumn ClipboardContentBinding="{x:Null}">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image x:Name="plaatje" Source="{Binding afbeelding}" Width="50" Height="50" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTextColumn Binding="{Binding productnaam}" ClipboardContentBinding="{x:Null}" Header="Naam"/>
+                <DataGridTextColumn Binding="{Binding omschijving}" ClipboardContentBinding="{x:Null}" Header="Cat"/>
+                <DataGridTextColumn Binding="{Binding prijs}" ClipboardContentBinding="{x:Null}" Header="prijs"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="btnVerwijderen" Content="Delete" Click="btnVerwijderen_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid x:Name="GridProduct" HorizontalAlignment="Left" Width="196" Height="312" Margin="247,0,0,0" VerticalAlignment="Top" Background="#FF258B11" >
+        </Grid>
+        <Button x:Name="Toevoegen" Content="toevoegen" HorizontalAlignment="Left" Margin="61,202,0,0" VerticalAlignment="Top" Width="75" Height="23" Click="toevoegen_Click"/>
+    </Grid>
+</UserControl>
